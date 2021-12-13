@@ -255,7 +255,7 @@ function dragula (initialContainers, options) {
 
   function drop (item, target) {
     var parent = getParent(item);
-    if (_copy && o.copySortSource && target === _source) {
+    if (_copy && o.copySortSource && target === _source && !o.copyKeepSourceItem) {
       parent.removeChild(_item);
     }
     if (isInitialPlacement(target)) {
